@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <link href="./index.css" type="text/css" rel="stylesheet">
-<title>
-  Home-Repair Box
-</title>
+
+<head>
+  <title> Repair Box - Home </title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script>
   window.onscroll = function() {
     var el = document.getElementsByClassName('header')[0];
@@ -15,12 +17,12 @@
     }
   };
 
-  function scrollStart() {
-    window.scrollTo(0, 900);
-  }
+  function scrollStart() {}
 
   function scrollEnd() {
-    window.scrollTo(0, 0);
+    $('html, body').animate({
+      scrollTop: $("#logo").offset().top
+    }, 1000);
   }
 
   function scrollContact() {
@@ -43,175 +45,173 @@
 
 <html>
 
-<div class="hold">
-  <div class="header">
-    <div class="container">
-      <div id="logo">
-        <img src="./data/logo.jpg"
-          height="60px" width="60px">
+<body>
+  <div class="hold">
+    <div class="header">
+      <div class="container">
+        <div id="logo">
+          <img src="./data/logo.jpg" height="60px" width="60px">
 
+        </div>
+        <ul class="nav">
+          <li><a href="">Home</a></li>
+          <li><a href="phone_repair.html">Phone Repair</a></li>
+          <li><a href="laptop_repair.html">Laptop Repair</a></li>
+          <li><a href="order.html">Order</a></li>
+          <li><a href="help.html">Help</a></li>
+        </ul>
       </div>
-      <ul class="nav">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="phone_repair.html">Phone Repair</a></li>
-        <li><a href="laptop_repair.html">Laptop Repair</a></li>
-        <li><a href="order.html">Order</a></li>
-        <li><a href="help.html">Help</a></li>
-      </ul>
-    </div>
-  </div>
-</div>
-<div class="section">
-  <div class="slider">
-    <img class="mySlides fade" src="./data/background.jpg"
-      width="100%">
-    <img class="mySlides fade" src="./data/IMG_20180429_090054.jpg"
-      width="100%">
-    <img class="mySlides fade" src="./data/IMG_20180430_161438.jpg"
-      width="100%">
-    <script>
-      var myIndex = 0;
-      carousel();
-
-      function carousel() {
-        var i;
-        var x = document.getElementsByClassName("mySlides");
-        for (i = 0; i < x.length; i++) {
-          x[i].style.display = "none";
-        }
-        myIndex++;
-        if (myIndex > x.length) {
-          myIndex = 1
-        }
-        x[myIndex - 1].style.display = "block";
-        setTimeout(carousel, 3000);
-      }
-    </script>
-    <div class="centeredstuff">
-      <div class="container slidercontent">
-        <h1 class="hero">Repair Box</h1>
-        <h2 class="hero">Here For All Your Computer Needs.</h2>
-        <div class="call" onclick="scrollStart()"><span>Get Started</span></div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="section">
-  <div class="container">
-    <div class="col four">
-      <h1 class="icon">[]</h1>
-      <h1 class="service">PC Servicing</h1>
-      <p>We clean and service your old, slow computer, and make it like new so you won't have to buy a new one!</p>
-    </div>
-    <div class="col four">
-      <h1 class="icon">[]</h1>
-      <h1 class="service">Phone Repair</h1>
-      <p>Got a cracked phone screen? Battery failing like your grades are? </p>
-    </div>
-    <div class="responsivegroup"></div>
-    <div class="col four">
-      <h1 class="icon">[]</h1>
-      <h1 class="service">Custom PC Builds</h1>
-      <p>Need a new computer but don't have time? We've got you covered. We do PC builds and we can customize it to your liking!</p>
-    </div>
-    <div class="col four">
-      <h1 class="icon">[]</h1>
-      <h1 class="service">Jack Guo</h1>
-      <p></p>
-    </div>
-    <div class="group"></div>
-  </div>
-</div>
-
-<div class="section">
-  <div class="container">
-    <h1>Services</h1>
-    <h2>We offer a variety of services, from </h2>
-    <div class="col three">
-      <h1 class="icon side">[ ]</h1>
-      <h1 class="feature side">Repair Things!</h1>
-      <p class="side">We repair all sorts of gadgets, including phones, laptops and desktop computers.</p>
-    </div>
-    <div class="col three">
-      <h1 class="icon side">[ ]</h1>
-      <h1 class="feature side">Custom PC builds</h1>
-      <p class="side">Want a personalized PC but don't have the time to make one? We can build and customize your computer, and then deliver it for free!</p>
-    </div>
-    <div class="col three">
-      <h1 class="icon side">[ ]</h1>
-      <h1 class="feature side">thing 3</h1>
-      <p class="side">The FitnessGram Pacer Test is a multistage aerobic capacity test that progressively gets more difficult as it continues. The 20 meter pacer test will begin in 30 seconds. Line up at the start. The running speed starts slowly but gets faster each
-        minute after you hear this signal bodeboop. A sing lap should be completed every time you hear this sound. ding Remember to run in a straight line and run as long as possible. The second time you fail to complete a lap before the sound, your test
-        is over. The test will begin on the word start. On your mark. Get ready!… Start. ding</p>
-
-      <div class="group margin"></div>
-    </div>
-  </div>
-  <div class="section bg">
-    <div class="container">
-      <h1>Contact Us</h1>
-      <h2>Some Methods of Contacting Us</h2>
-      <div class="col two bg margin extrapad">
-        <h1 class="icon side">[]</h1>
-        <span class="feature side">Discord?</span><span class="side"> - Join Our Discord!</span>
-        <p class="side"><a href="https://discord.gg/PESdC2t" alt="https://discord.gg/PESdC2t">Repair Box</a></p>
-      </div>
-      <div class="col two bg margin extrapad">
-        <h1 class="icon side">[]</h1>
-        <span class="feature side">Facebook?</span><span class="side"> - something here?</span>
-        <p class="side">O-oooooooooo AAAAE-A-A-I-A-U- JO-oooooooooooo AAE-O-A-A-U-U-A- E-eee-ee-eee AAAAE-A-E-I-E-A-JO-ooo-oo-oo-oo EEEEO-A-AAA-AAAA</p>
-      </div>
-      <div class="group margin"></div>
-      <div class="col two bg margin extrapad">
-        <h1 class="icon side">[]</h1>
-        <span class="feature side">Twitter?</span><span class="side"> - wow what you still use twitter</span>
-        <p class="side">O-oooooooooo AAAAE-A-A-I-A-U- JO-oooooooooooo AAE-O-A-A-U-U-A- E-eee-ee-eee AAAAE-A-E-I-E-A-JO-ooo-oo-oo-oo EEEEO-A-AAA-AAAA</p>
-      </div>
-      <div class="col two bg margin extrapad">
-        <h1 class="icon side">[]</h1>
-        <span class="feature side">Instagram</span><span class="side"> - Follow Our Instagram!</span>
-        <p class="side">Follow <a href="https://www.instagram.com/repairbox/">@repairbox</a></p>
-      </div>
-      <div class="group"></div>
     </div>
   </div>
   <div class="section">
-    <div class="container">
-      <div class="col two">
-        <h1 class="icon">[]</h1>
-        <h1 class="service">customer experience 1</h1>
-        <p>honesty idk</p>
-      </div>
-      <div class="col two">
-        <h1 class="icon">[]</h1>
-        <h1 class="service">customer experience 2</h1>
-        <p>i want refund</p>
-      </div>
-      <div class="group"></div>
+    <div class="slider">
+      <img class="mySlides fade" src="./data/background.jpg" width="100%">
+      <img class="mySlides fade" src="./data/IMG_20180429_090054.jpg" width="100%">
+      <img class="mySlides fade" src="./data/IMG_20180430_161438.jpg" width="100%">
+      <script>
+        var myIndex = 0;
+        carousel();
 
-    </div>
-  </div>
-  <div class="section">
-    <div class="container">
-      <h1 class="reset">We're Here To Fix Your Problems!</h1>
-      <br>
-      <br>
+        function carousel() {
+          var i;
+          var x = document.getElementsByClassName("mySlides");
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+          }
+          myIndex++;
+          if (myIndex > x.length) {
+            myIndex = 1
+          }
+          x[myIndex - 1].style.display = "block";
+          setTimeout(carousel, 3000);
+        }
+      </script>
       <div class="centeredstuff">
-        <div class="call1" onclick="scrollEnd()"><span>Back to the top!</span></div>
+        <div class="container slidercontent">
+          <h1 class="hero">Repair Box</h1>
+          <h2 class="hero">Here For All Your Computer Needs.</h2>
+          <div class="call" onclick="scrollStart()"><span>Get Started</span></div>
+        </div>
       </div>
     </div>
   </div>
   <div class="section">
-    <div class="footer">
-      <div class="container white">
-        <center>
-          <p>Copyright 2018 by Repair Box, LLC</p>
-          <p>....</p>
-          <p>.</p>
-        </center>
+    <div class="container">
+      <div class="col four">
+        <h1 class="icon">[]</h1>
+        <h1 class="service">PC Servicing</h1>
+        <p>We clean and service your old, slow computer, and make it like new so you won't have to buy a new one!</p>
+      </div>
+      <div class="col four">
+        <h1 class="icon">[]</h1>
+        <h1 class="service">Phone Repair</h1>
+        <p>Got a cracked phone screen? Battery failing like your grades are? </p>
+      </div>
+      <div class="responsivegroup"></div>
+      <div class="col four">
+        <h1 class="icon">[]</h1>
+        <h1 class="service">Custom PC Builds</h1>
+        <p>Need a new computer but don't have time? We've got you covered. We do PC builds and we can customize it to your liking!</p>
+      </div>
+      <div class="col four">
+        <h1 class="icon">[]</h1>
+        <h1 class="service">Jack Guo</h1>
+        <p></p>
+      </div>
+      <div class="group"></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="container">
+      <h1>Services</h1>
+      <h2>We offer a variety of services, from </h2>
+      <div class="col three">
+        <h1 class="icon side">[ ]</h1>
+        <h1 class="feature side">Repair Things!</h1>
+        <p class="side">We repair all sorts of gadgets, including phones, laptops and desktop computers.</p>
+      </div>
+      <div class="col three">
+        <h1 class="icon side">[ ]</h1>
+        <h1 class="feature side">Custom PC builds</h1>
+        <p class="side">Want a personalized PC but don't have the time to make one? We can build and customize your computer, and then deliver it for free!</p>
+      </div>
+      <div class="col three">
+        <h1 class="icon side">[ ]</h1>
+        <h1 class="feature side">thing 3</h1>
+        <p class="side">The FitnessGram Pacer Test is a multistage aerobic capacity test that progressively gets more difficult as it continues. The 20 meter pacer test will begin in 30 seconds. Line up at the start. The running speed starts slowly but gets faster each
+          minute after you hear this signal bodeboop. A sing lap should be completed every time you hear this sound. ding Remember to run in a straight line and run as long as possible. The second time you fail to complete a lap before the sound, your
+          test is over. The test will begin on the word start. On your mark. Get ready!… Start. ding</p>
+
+        <div class="group margin"></div>
+      </div>
+    </div>
+    <div class="section bg">
+      <div class="container">
+        <h1>Contact Us</h1>
+        <h2>Some Methods of Contacting Us</h2>
+        <div class="col two bg margin extrapad">
+          <h1 class="icon side">[ ]</h1>
+          <span class="feature side">Discord</span><span class="side"> - Join Our Discord!</span>
+          <p class="side"><a href="https://discord.gg/PESdC2t" alt="https://discord.gg/PESdC2t">Repair Box</a></p>
+        </div>
+        <div class="col two bg margin extrapad">
+          <h1 class="icon side">[ ]</h1>
+          <span class="feature side">Facebook</span><span class="side"> - something here?</span>
+          <p class="side">O-oooooooooo AAAAE-A-A-I-A-U- JO-oooooooooooo AAE-O-A-A-U-U-A- E-eee-ee-eee AAAAE-A-E-I-E-A-JO-ooo-oo-oo-oo EEEEO-A-AAA-AAAA</p>
+        </div>
+        <div class="group margin"></div>
+        <div class="col two bg margin extrapad">
+          <h1 class="icon side">[ ]</h1>
+          <span class="feature side">Twitter?</span><span class="side"> - wow what you still use twitter</span>
+          <p class="side">O-oooooooooo AAAAE-A-A-I-A-U- JO-oooooooooooo AAE-O-A-A-U-U-A- E-eee-ee-eee AAAAE-A-E-I-E-A-JO-ooo-oo-oo-oo EEEEO-A-AAA-AAAA</p>
+        </div>
+        <div class="col two bg margin extrapad">
+          <h1 class="icon side">[ ]</h1>
+          <span class="feature side">Instagram</span><span class="side"> - Follow Our Instagram!</span>
+          <p class="side">Follow <a href="https://www.instagram.com/repairbox/">@repairbox</a></p>
+        </div>
         <div class="group"></div>
       </div>
     </div>
-  </div>
+    <div class="section">
+      <div class="container">
+        <div class="col two">
+          <h1 class="icon">[]</h1>
+          <h1 class="service">customer experience 1</h1>
+          <p>honesty idk</p>
+        </div>
+        <div class="col two">
+          <h1 class="icon">[]</h1>
+          <h1 class="service">customer experience 2</h1>
+          <p>i want refund</p>
+        </div>
+        <div class="group"></div>
+
+      </div>
+    </div>
+    <div class="section">
+      <div class="container">
+        <h1 class="reset">We're Here To Fix Your Problems!</h1>
+        <br>
+        <br>
+        <div class="centeredstuff">
+          <div class="call1" onclick="scrollEnd()"><span>Top</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="footer">
+        <div class="container white">
+          <center>
+            <p>Copyright 2018 by Repair Box, LLC</p>
+            <p>.....</p>
+            <p>.</p>
+          </center>
+          <div class="group"></div>
+        </div>
+      </div>
+    </div>
+</body>
 
 </html>
