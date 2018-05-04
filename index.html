@@ -6,24 +6,15 @@
 </head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script>
-  window.onscroll = function() {
-    var el = document.getElementsByClassName('header')[0];
-    var className = 'small';
-    if (el.classList) {
-      if (window.scrollY > 10)
-        el.classList.add(className);
-      else
-        el.classList.remove(className);
-    }
-  };
+  $(document).ready(function() {
+    $("#totop").click(function() {
+      $('html, body').animate({
+        scrollTop: $("#logo").offset().top
+      }, 2000);
+    });
+  });
 
   function scrollStart() {}
-
-  function scrollEnd() {
-    $('html, body').animate({
-      scrollTop: $("#logo").offset().top
-    }, 1000);
-  }
 
   function scrollContact() {
     window.scrollTo(0, 2020);
@@ -196,7 +187,7 @@
         <br>
         <br>
         <div class="centeredstuff">
-          <div class="call1" onclick="scrollEnd()"><span>Top</span></div>
+          <div class="call1" onclick="smoothScrollingTo('#logo')" id="totop"><span>Top</span></div>
         </div>
       </div>
     </div>
