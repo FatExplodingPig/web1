@@ -6,21 +6,58 @@
 </head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script>
-  $(document).ready(function() {
-    $("#totop").click(function() {
-      $('html, body').animate({
-        scrollTop: $("#logo").offset().top
-      }, 2000);
-    });
+  $(document).on('click', 'a[href^="#"]', function(e) {
+    //get the element's target
+    var id = $(this).attr('href');
+    var $id = $(id);
+
+    //prevents the ugly, default jump
+    e.preventDefault();
+
+    var pos = $(id).offset().top; //gets current y distance from target
+    $('body, html').animate({
+      scrollTop: pos
+    }, 1000); //scrolls to top of target
   });
-
-  function scrollStart() {}
-
-  function scrollContact() {
-    window.scrollTo(0, 2020);
+</script>
+<!--
+$(document).ready(function() {
+  $("#totop").click(function() {
+    $('html, body').animate({
+      scrollTop: $("#top").offset().top
+    }, 800);
+  });
+  $("#toservices").click(function() {
+    $('html, body').animate({
+      scrollTop: $("#services").offset().top
+    }, 800);
+  });
+});
+-->
+<script>
+  window.onscroll = function() {
+    var el = document.getElementsByClassName('header')[0];
+    var className = 'small';
+    var yourImg = document.getElementById('logo');
+    if (el.classList) {
+      if (window.scrollY > 10) {
+        el.classList.add(className);
+        yourImg.classList.add('logoS');
+        // if (yourImg && yourImg.style) {
+        //   yourImg.style.height = '50px';
+        //   yourImg.style.width = '50px';
+        // }
+      } else {
+        el.classList.remove(className);
+        yourImg.classList.remove('logoS');
+        // if (yourImg && yourImg.style) {
+        //   yourImg.style.height = '78px';
+        //   yourImg.style.width = '78px';
+        // }
+      }
+    };
   }
 </script>
-
 <script src="simpleCart.js"></script>
 <script>
   simpleCart({
@@ -37,13 +74,14 @@
 <html>
 
 <body>
+  <div id=top></div>
   <div class="hold">
     <div class="header">
+      <div class="logoclass">
+        <img src="./data/logo.png" id="logo" class="logoclass">
+      </div>
       <div class="container">
-        <div id="logo">
-          <img src="./data/logo.jpg" height="60px" width="60px">
 
-        </div>
         <ul class="nav">
           <li><a href="">Home</a></li>
           <li><a href="phone_repair.html">Phone Repair</a></li>
@@ -81,7 +119,7 @@
         <div class="container slidercontent">
           <h1 class="hero">Repair Box</h1>
           <h2 class="hero">Here For All Your Computer Needs.</h2>
-          <div class="call" onclick="scrollStart()"><span>Get Started</span></div>
+          <div class="call"><a href="#services" class=hidelinkw><span>Get Started</span></a></div>
         </div>
       </div>
     </div>
@@ -110,6 +148,7 @@
         <p></p>
       </div>
       <div class="group"></div>
+      <div id=services></div>
     </div>
   </div>
 
@@ -186,8 +225,10 @@
         <h1 class="reset">We're Here To Fix Your Problems!</h1>
         <br>
         <br>
+        <br>
+        <br><br><br><br>
         <div class="centeredstuff">
-          <div class="call1" onclick="smoothScrollingTo('#logo')" id="totop"><span>Top</span></div>
+          <div class="call1" id="totop"><a href="#top" class="hidelinkb"><span>Top</span></a></div>
         </div>
       </div>
     </div>
