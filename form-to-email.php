@@ -1,21 +1,22 @@
 <?php
   $name = $_POST['name'];
   $visitor_email = $_POST['email'];
-  $message = $_POST['message'];
+  $device = $_POST['device'];
+  $request = $_POST['request'];
+  $other = $_POST['other'];
 ?>
 <?php
-	$email_from = 'repairbox4@gmail.com';
+	$email_from = $visitor_email;
 
-	$email_subject = "New Form submission";
+	$email_subject = "New Request from $name";
 
-	$email_body = "You have received a new message from the user $name.\n".
-                            "Here is the message:\n $message".
+	$email_body = "$name ($visitor_email) has submitted a request. Device - $device. Request - \n \n $message \n \n Other - \n \n $other"
 ?>
 <?php
 
-$to = "repairbox4@gmail.com";
+$to = "repairbox4@gmail.com, azhangvo@gmail.com";
 
-$headers = "From: $email_from \r\n";
+$headers = "From: $name \r\n";
 
 $headers .= "Reply-To: $visitor_email \r\n";
 
