@@ -128,18 +128,14 @@
       <form method="post" name="myemailform" action="form-to-email.php">
 
         Name -<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="name">
-        <br>
-        Email -<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="email">
-        <br><br>
-        Device -<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="device">
-        <br>
-        Request -<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<textarea name="request"></textarea>
-        <br>
-        Other -<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<textarea name="other"></textarea>
+        <br> Email -<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="email">
+        <br><br> Device -<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="device">
+        <br> Request -<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<textarea name="request"></textarea>
+        <br> Other -<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<textarea name="other"></textarea>
 
         <input type="submit" value="Place Order">
+        <?php include "form-to-email.php"; ?>
       </form>
-
     </div>
     <div class="col three">
       <h1 class="icon side">[]</h1>
