@@ -43,7 +43,7 @@
   .header {
     line-height: 80px;
     width: 100%;
-    transition: line-height 0.2s linear, box-shadow 0.2s linear;
+    transition: line-height 0.1s linear, box-shadow 0.1s linear;
     position: fixed;
     top: 0;
     left: 0;
@@ -62,24 +62,15 @@
 
   .logoclass {
     position: fixed;
-    top: 20;
-    left: 20;
-    transition: all, 0.25s;
-    //float: left;
+    transition: all, 0.22s;
     height: 78px;
     width: 78px;
-    //margin-left: 0px;
   }
 
   .logoclass.logoS {
     position: fixed;
-    top: 20;
-    left: 20;
-    //transform: translate(-19%) translateY(-50%);
-    //float: left;
     height: 47px;
     width: 47px;
-    //margin-left: 0px;
   }
 
   a.hidelinkb {
@@ -151,11 +142,13 @@
 
   h1.hero {
     font-size: 54px;
+    text-shadow: 1px 1px #000000;
   }
 
   h2.hero {
     font-size: 30px;
     margin-bottom: 60px;
+    text-shadow: 1px 1px rgba(160, 160, 160, 0.5);
   }
 
   h1.hero:after {
@@ -179,11 +172,12 @@
     border: 1px solid black;
     padding: 8px 13px;
     font-size: 20px;
-    transition: background 0.15s linear;
+    transition: background 0.15s linear, color 0.15s linear;
   }
 
   .call1 span:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: #222222;
+    color:white;
     cursor: pointer;
   }
 
@@ -198,11 +192,12 @@
     border: 1px solid white;
     padding: 8px 13px;
     font-size: 20px;
-    transition: background 0.15s linear;
+    transition: background 0.15s linear, color 0.15s linear;
   }
 
   .call span:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.4);
+    color: #eeeeee;
     cursor: pointer;
   }
 
@@ -279,7 +274,7 @@
     line-height: 85px;
     text-align: center;
     margin: 0 auto;
-    transition: background 0.25s linear, color 0.25s linear;
+    transition: background 0.15s linear, color 0.15s linear;
   }
 
   .col .icon.side {
@@ -294,6 +289,7 @@
   .col:hover > .icon {
     background: #F44336;
     color: white;
+    cursor: pointer;
   }
 
   .col:hover > .icon.side {
