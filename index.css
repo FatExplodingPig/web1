@@ -115,8 +115,8 @@
 
   .centeredstuff {
     position: absolute;
-    top: 19em;
-    left: 25em;
+    top: 50$;
+    left: 50%;
     transform: translate(-50%, -50%);
 }
 
