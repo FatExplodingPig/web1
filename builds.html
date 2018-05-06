@@ -9,24 +9,24 @@
   window.onscroll = function() {
     var el = document.getElementsByClassName('header')[0];
     var className = 'small';
+    var yourImg = document.getElementById('logo');
     if (el.classList) {
-      if (window.scrollY > 10)
+      if (window.scrollY > 30) {
         el.classList.add(className);
-      else
+        yourImg.classList.add('logoS');
+        // if (yourImg && yourImg.style) {
+        //   yourImg.style.height = '50px';
+        //   yourImg.style.width = '50px';
+        // }
+      } else {
         el.classList.remove(className);
-    }
-  };
-
-  function scrollStart() {
-    window.scrollTo(0, 900);
-  }
-
-  function scrollEnd() {
-    window.scrollTo(0, 0);
-  }
-
-  function scrollContact() {
-    window.scrollTo(0, 2020);
+        yourImg.classList.remove('logoS');
+        // if (yourImg && yourImg.style) {
+        //   yourImg.style.height = '78px';
+        //   yourImg.style.width = '78px';
+        // }
+      }
+    };
   }
 </script>
 
@@ -47,7 +47,7 @@
   <div class="header">
     <div class="container">
       <div id="logo">
-        <img src="./data/logo" height="60px" width="60px">
+        <img src="./data/logo.png" id="logo" class="logoclass">
       </div>
       <ul class="nav">
         <li><a href="index.html">Home</a></li>
@@ -62,12 +62,9 @@
 </div>
 <div class="section">
   <div class="slider">
-    <img class="mySlides fade" src="https://lh3.googleusercontent.com/QM0-Y6h8Xj1UyOjBDMPdsI69pA13KMgG6HIyC1j-lm2twtqoCHE02PrGZmf4BgxOS2C6zLVILbyETKFToCTVsPsex3v_l1YPe8LUVf4m2ff-WXCS6IWmqDVhUmvhlXZMvKeNIxoQ5qFYPB2EmixIj-ow61voiqysOZR_kZDp6b8Rg1JeNGUPKpWYoCVhyffmdIeNDESrQo0bEIT9fO09h2ETIhRGYJTbtddU0Bx7_Y7YdUz047Gn-3O2bWgUDtkeX4DplTfus0SDrqlrseim4_nKSwUHcNTizhKQn0j2qtoTSbgEyZT622hJ1J_tAvkE-y1ejquocK8VHn0JLCNiIcQZrd0MZT9NovRK99Kq82oRGvqNiY3TJMePl0PBwKtQByuVdIJ3AlAu3SRlOtoJG7mDy4wRQTMDm9j7NY54sfmQSD_-c9Y0qy-aAZtbOlJX3Wbw3x8G8KjuWN5Tr5CV3IVL6TMNJVfkshdvajRL9cmz43qhX_pkGdveqDgR84WZ5tS-NIUlYtDY-YS9KVoZir-Vvirc6eiekLsUpsMCF2fS8s3E7NHdsrETDx6z0O59nsiSXu8BUGbOPp6ntrDMZBjXiPLGS7ooGuUeqyE=w391-h220-no"
-      width="100%">
-    <img class="mySlides fade" src="https://lh3.googleusercontent.com/djjbD3a4Wylz5iJBUkCjcyCSaTaVPWMl7Cqw5WKCelaWYhzS4FYVju-wvFQA4UD2tH6G5R42BEvTZqoW_puz9CatoALmXq3rXcYMyaUT0Ols-KG4fntckBs6UMHOVJiwm86UA8bEkAfID5-x90nyODcYRGVAGIev_bo0HRlYmTigC6LvbisTLwycpcoSASa74L89I0yjS2XQMgb1Ocils7iiXMVM9c0RMUx2iCK6xgh8QCb2rsBR-7q-1EsLJV-5yL2-D4BuY-ypWuhjwkpToKlkmTZL4XL2aBsPYAEJwKzM5Qr6Snmzt-9iv2We6h070MhesgiLy4QacYOdciaPQTHplJjurQXT3kUqNUFl7viUzfZs3TP6wjjywgbNIfk2ztNqa2ft-m4lrjiV-39VSTGN9oHZp8bs051HVgsgvg3QZtMquNVDzEEzYIJG-MMcilPUxb-7kWdcPuUqT1ngGsbdBTt2B30mbfvUTZDFbE0aEBuQaDoVApJMrSDNsu9grfdC_0mTN4pnh9Jix1V2u22IWTR0u2e8a4QfOvXjhwIV6wuohZuT-J5618JE_EZ5WS0wbpJrrMefzUZVw5FcMJB50A1vP4tAJdCICeI=w1161-h653-no"
-      width="100%">
-    <img class="mySlides fade" src="https://lh3.googleusercontent.com/6FVyPEaouhhQkbLBlQ-g5n5g_RzGTIskTMNCoJiDc9azq0GpljCeF7mJPNcdKAoAXlct0_VJR-PNogRiUse1ob7ac_gV44chvlThJdATSGOAmGzWTlPx3UXq2o3RchcK1-LN-bwNOTUN1uvkyClGdWnO6sDUcxnifI_Mxn6k4g23WS7dceLslDOGDTykPV7reode0BBRlbo5bojV1ls-ts8kkqU2nTmwaHC9C9WYSWP9Bmrtl60FBRgQmTd2hG3LWPyhbBN3VPYKU9ErKXANyNDDmoDmyhFQjIp-6H7nznm9AqPwmtNUVWFy5tMAMOIds0BJ2Kq1okjAEXjUnXSuJj1DwwfgGBJjH4qQATWntY6LRCr9eyzlY3__CdZtUX-4-w_TVbsJ283TVJ4RKfTkg_Cmsg-gReE0wEt0faqPlJwJN1Vb5C_PeLn2_rAyJAoEXy5tWidhDFc-Wkyc0trHtXNm6TVmN-PURSOYcgoNjpQr3F6B7xFg4SMKG1TWrOQD7R27yUfCQdAXST_WTSIrdodqKQPPpgVYEpB94QT2xWEaq6vzfv7Qm18s1-wLGbW3mNIfEQ9veaIz80DGOwbC5oxr0MB7FywqbhN60oA=w1220-h686-no"
-      width="100%">
+    <img class="mySlides fade" src="./data/logo.png" width="100%">
+    <img class="mySlides fade" src="./data/logo.png" width="100%">
+    <img class="mySlides fade" src="./data/logo.png" width="100%">
     <script>
       var myIndex = 0;
       carousel();
@@ -88,7 +85,7 @@
     </script>
     <div class="centeredstuff">
       <div class="container slidercontent">
-        <h1 class="hero">Laptop Repair</h1>
+        <h1 class="hero">Custom Builds</h1>
         <div class="call" onclick="scrollStart()"><span>Learn More</span></div>
       </div>
     </div>

@@ -60,14 +60,17 @@ body {
   height: 40px;
 }
 
-#logo {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  float: left;
-  height: 40px;
-  width: 170px;
-  margin-left: 5px;
+.logoclass {
+  position: fixed;
+  transition: all, 0.22s;
+  height: 78px;
+  width: 78px;
+}
+
+.logoclass.logoS {
+  position: fixed;
+  height: 47px;
+  width: 47px;
 }
 
 ul.nav {
