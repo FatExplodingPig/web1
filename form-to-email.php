@@ -36,4 +36,7 @@ $result = $mailer->send($message);
 
 //mail($to,$email_subject,$email_body,$headers);
 //header("Location: ./index.html");
+<html>
+<p> Hello $name! Your email has been sent. </p>
+</html>
 ?>
