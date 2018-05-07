@@ -1,5 +1,5 @@
 <?php
-require_once '/var/www/html/web1/vendor/swiftmailer/swiftmailer/lib/swift_required.php';
+require_once './vendor/swiftmailer/swiftmailer/lib/swift_required.php';
   $name = $_POST['name'];
   $visitor_email = $_POST['email'];
   $device = $_POST['device'];
