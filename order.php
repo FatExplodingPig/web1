@@ -125,7 +125,7 @@
     <div class="col three">
       <h1 class="icon side">[]</h1>
       <h1 class="feature side">Custom PC builds</h1>
-      <form method="post" name="myemailform" action="form-to-email.php">
+      <form method="post" action="./form-to-email.php">
 
         Name -<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="name">
         <br> Email -<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="email">
